@@ -5,18 +5,15 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTES } from './app.routes';
 
 // Modulos
+import { FormsModule } from "@angular/forms";
 //PageModule contiene 
 import { PageModule } from './pages/page.module';
 
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-
-
-
-
-//import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
+
 
 
 
@@ -28,12 +25,12 @@ import { RegisterComponent } from './login/register.component';
     AppComponent,
     LoginComponent,
     RegisterComponent
- 
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PageModule
+    PageModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
