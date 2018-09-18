@@ -16,6 +16,8 @@ import { PAGES_ROUTE } from "./page.routes";
 import { IncrementadorComponent } from "../components/incrementador/incrementador.component";
 import { GraficoDonasComponent } from "../components/grafico-donas/grafico-donas.component";
 import { AccountSettingComponent } from './account-setting/account-setting.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
 
@@ -26,7 +28,9 @@ import { AccountSettingComponent } from './account-setting/account-setting.compo
         Graficas1Component,
         IncrementadorComponent,
         GraficoDonasComponent,
-        AccountSettingComponent
+        AccountSettingComponent,
+        PromesasComponent,
+        RxjsComponent
     ],
     imports:[
     SharedModule,
