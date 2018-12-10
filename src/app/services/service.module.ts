@@ -4,17 +4,26 @@ import { CommonModule } from '@angular/common';
 import  {
 SettingsService,
 SharedService,
-SliderbarService
+SliderbarService,
+UsuarioService,
+LoginGuardGuard
 } from  './service.index';
+import { HttpClientModule } from '@angular/common/http';
+import { SubirArchivoService } from './subir-archivo/subir-archivo.service';
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers:[
       SettingsService,
       SharedService,
-      SliderbarService
+      SliderbarService,
+      UsuarioService,
+      LoginGuardGuard,
+      SubirArchivoService
 
   ],
   declarations: []
