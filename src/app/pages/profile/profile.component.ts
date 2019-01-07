@@ -34,6 +34,7 @@ export class ProfileComponent implements OnInit {
 
   }
 
+  //Función que se ejecuta en el evento change del input file
   seleccionImgen(archivo: File) {
 
     if (!archivo) {
@@ -51,11 +52,8 @@ export class ProfileComponent implements OnInit {
     //Leemos  imagen con objeto reader para mostrar un previsualizador
     let reader=new FileReader();
     let urlImagenTemp=reader.readAsDataURL(archivo);
-     //reader.result:Regresa una imagen en base 64
+     //reader.result:Regresa una imagen en base 64 url
     reader.onloadend= () => this.imagenTemp=reader.result.toString();
-
-  
-
 
   }
 
