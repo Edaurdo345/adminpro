@@ -45,6 +45,7 @@ export class ModalUploadComponent implements OnInit {
       this.imagenSubir = null;
       return;
     }
+    //esta propiedad es la que se manda al subir archivo
     this.imagenSubir = archivo;
 
     //Leemos  imagen con objeto reader para mostrar un previsualizador
@@ -56,9 +57,10 @@ export class ModalUploadComponent implements OnInit {
   }
 
    subirImagen(){
+     //Al dar click sobre el boton de subir archivo 
      this._subirArchivoService.subirArchivo(this.imagenSubir,this._modalUploadService.tipo,this._modalUploadService.id)
           .then(resp=>{
-            
+            //Cuando se emite una respuesta desde la peticion para subir archivo notificara a la variable notificacion y desde elussuario.component.ts se recargaran los usuarios
             this._modalUploadService.notificacion.emit(resp);
             this.cerrarModal();
           }).catch(err=>{

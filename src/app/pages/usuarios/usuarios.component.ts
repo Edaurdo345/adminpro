@@ -32,7 +32,7 @@ export class UsuariosComponent implements OnInit {
   ngOnInit() {
     this.cargarUsuarios();
 
-    //Escuchamos emmiter  del  ModalUploadService cuado se duba imagen se dispara respuesta desde el subscribe y se recarga la pagina
+    //Escuchamos emmiter  del  ModalUploadService cuado se suba imagen se dispara respuesta desde el subscribe y se recarga la pagina
     this._modalUploadService.notificacion
       .subscribe(resp => this.cargarUsuarios());
   }
